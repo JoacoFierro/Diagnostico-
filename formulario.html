@@ -6,35 +6,47 @@
    <title>Sistema de Registro de productos</title>
 </meta> 
 <body>
-    <div class="formulario">
-        <form>
+    <div class="formulario" id="formularioEnviado">
+        <form action="conexion.php" method="post">
         <h1>Formulario de Producto</h1>
         <div class="inputs">
             <div class="casillas">
                 <div class="inputBlock">
                     <label for="codigo">Código</label>
-                    <input id="codigo" name="codigo" type="text" placeholder="PROD01K">
+                    <input  id="codigo" name="codigo" type="text" placeholder="PROD01K">
                 </div>
                 <div class="inputBlock">
                     <label>Nombre</label>
-                    <input type="text" placeholder="Set Comedor">
+                    <input id="nombre" name="nombre" type="text" placeholder="Set Comedor">
                 </div>
             </div>
             <div class="casillas">
                 <div class="inputBlock">
-                    <label>Bodega</label><select></select> 
+                    <label>Bodega</label>
+                    <select name="bodega" id="bodega" selected="">
+                        <option value=""></option>
+                       
+                    </select> 
                 </div>
                 <div class="inputBlock">
-                    <label>Sucursal</label><select ></select>
+                    <label>Sucursal</label>
+                    <select name="sucursal" id="sucursal" selected="">
+                        <option value=""></option>
+
+                    </select>
                 </div>
             </div>
             <div class="casillas">
                 <div class="inputBlock">
-                    <label>Moneda</label><select ></select>
+                    <label>Moneda</label>
+                    <select name="moneda" id="moneda"  selected="" >
+                        <option value=""></option>
+                        <option value="Prueba">Prueba</option> <!-- borrar -->
+                    </select>
                 </div>
                 <div class="inputBlock">
                     <label>Precio</label>
-                    <input type="text" placeholder="1500">
+                    <input name="precio" id="precio" type="text"  placeholder="1500">
                 </div>
             </div>
             
@@ -50,11 +62,12 @@
         </div>
         <div class="inputBlock">
             <label for="descripcion">Descripción</label>
-                 <textarea id="descripcion" placeholder="Escribe la descripción del producto"></textarea>
+                 <textarea name="descripcion"  id="descripcion" placeholder="Escribe la descripción del producto"></textarea>
         </div>
             <button type="submit">Guardar Producto</button>
         </form>
     </div>
+    <script src="validacion.js"></script>
 </body>
 </head>
 

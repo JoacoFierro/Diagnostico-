@@ -1,0 +1,20 @@
+Instrucciones para la base de datos:
+- Tener instalado Postgres 18.0
+- La contraseña es 1234
+- El host:puerto es localhost:5432
+
+Versiones:
+
+PHP Version: OS Default Version (8.4.14)
+
+Observaciones:
+
+- Se construyo el proyecto en Windows 11 
+- Se debe habilitar las extensiones: pdo_pgsql pgsql en el php.ini
+
+Instrucciones para ejecutar:
+- Ejecute el siguiente comando en la terminal para iniciar el servidor: php -S localhost:8000
+- Abra el navegador y pegue la siguiente direccion: http://localhost:8000/formulario.html
+- Debe tener la base de datos activa
+- Ejecute el archivo "CreacionPoblaciomiento.php" para que funcione bien la Base de Datos con el comando: php CreacionPoblamiento.php
+
