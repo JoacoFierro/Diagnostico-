@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+   <title>Sistema de Registro de productos</title>
+</meta> 
+<body>
+    <div class="formulario">
+        <form>
+        <h1>Formulario de Producto</h1>
+        <div class="inputs">
+            <div class="casillas">
+                <div class="inputBlock">
+                    <label for="codigo">Código</label>
+                    <input id="codigo" name="codigo" type="text" placeholder="PROD01K">
+                </div>
+                <div class="inputBlock">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Set Comedor">
+                </div>
+            </div>
+            <div class="casillas">
+                <div class="inputBlock">
+                    <label>Bodega</label><select></select> 
+                </div>
+                <div class="inputBlock">
+                    <label>Sucursal</label><select ></select>
+                </div>
+            </div>
+            <div class="casillas">
+                <div class="inputBlock">
+                    <label>Moneda</label><select ></select>
+                </div>
+                <div class="inputBlock">
+                    <label>Precio</label>
+                    <input type="text" placeholder="1500">
+                </div>
+            </div>
+            
+            <label class="materialTitulo">Material del Producto</label>
+                <div class="opcionesMaterial">
+                    <input id="plastico" type="checkbox" name="material" value="Plastico" checked> <label for="plastico">Plástico</label>
+                    <input id="metal" type="checkbox" name="material" value="Metal"> <label for="metal">Metal</label>
+                    <input id="madera" type="checkbox" name="material" value="Madera"> <label for="madera">Madera</label>
+                    <input id="vidrio" type="checkbox" name="material" value="Vidrio"> <label for="vidrio">Vidrio</label>
+                    <input id="textil" type="checkbox" name="material" value="Textil"> <label for="textil">Textil</label>
+                </div>
+            
+        </div>
+        <div class="inputBlock">
+            <label for="descripcion">Descripción</label>
+                 <textarea id="descripcion" placeholder="Escribe la descripción del producto"></textarea>
+        </div>
+            <button type="submit">Guardar Producto</button>
+        </form>
+    </div>
+</body>
+</head>
+
+</html>
