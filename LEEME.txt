@@ -31,8 +31,10 @@ Instrucciones para iniciar base de datos:
 
 
 Instrucciones para ejecutar formulario:
-1. Debe estar en el directorio donde esta el archivo formulario.html
-2. Ejecute el siguiente comando en la terminal para iniciar el servidor: php -S localhost:8000
-3. Abra el navegador y pegue la siguiente direccion en la barra de busqueda: http://localhost:8000/formulario.html
-4. Debe tener la base de datos activa
-5. Ejecute el archivo "CreacionPoblaciomiento.php" dentro del directorio de "Servidor" con el comando: php CreacionPoblamiento.php
+1. Debe tener la base de datos activa
+2. Ejecute el archivo "CreacionPoblaciomiento.php" dentro del directorio de "Servidor" con el comando: php CreacionPoblamiento.php
+3. Vuelva a estar en el directorio donde esta el archivo formulario.html
+4. Ejecute el siguiente comando en la terminal para iniciar el servidor: php -S localhost:8000
+5. Abra el navegador y pegue la siguiente direccion en la barra de busqueda: http://localhost:8000/formulario.html
+
+
