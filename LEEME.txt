@@ -1,9 +1,3 @@
-Instrucciones para la base de datos:
-- Tener instalado Postgres 18.0
-- La contraseña es 1234
-- El host:puerto es localhost:5432.
-- Se recomienda usar pgAdmin 4 para la visualizacion de datos.
-
 Versiones:
 
 PHP Version: OS Default Version (8.4.14)
@@ -12,12 +6,24 @@ Postgres 18.0
 Observaciones:
 
 - Se construyo el proyecto en Windows 11 
-- Se debe habilitar las extensiones: pdo_pgsql pgsql en el php.ini
-
-Instrucciones para ejecutar:
+- Se utilizo PHP VS17 x64 Non Thread Safe ZIP 
+- Se debe habilitar las extensiones: pdo_pgsql y pgsql en el php.ini
 - Se recomienda usar Visual Studio Code
-- Ejecute el siguiente comando en la terminal para iniciar el servidor: php -S localhost:8000
-- Abra el navegador y pegue la siguiente direccion: http://localhost:8000/formulario.html
-- Debe tener la base de datos activa
-- Ejecute el archivo "CreacionPoblaciomiento.php" para que funcione bien la Base de Datos con el comando: php CreacionPoblamiento.php
 
+Instrucciones para iniciar base de datos:
+1. Ejecute pgAdmin 4
+2. Agregue un nuevo Server llamado Tarea
+3. Añada un base de datos con los siguentes parametros: 
+
+    Host name = localhost
+    Port = 5432
+    Maintance Database = postgres
+    Username = postgres
+    Password = 1234
+
+Instrucciones para ejecutar formulario:
+1. Debe estar en el directorio donde esta el archivo formulario.html
+2. Ejecute el siguiente comando en la terminal para iniciar el servidor: php -S localhost:8000
+3. Abra el navegador y pegue la siguiente direccion en la barra de busqueda: http://localhost:8000/formulario.html
+4. Debe tener la base de datos activa
+5. Ejecute el archivo "CreacionPoblaciomiento.php" para que funcione bien la Base de Datos con el comando: php CreacionPoblamiento.php
