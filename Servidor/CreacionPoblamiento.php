@@ -16,8 +16,8 @@ try {
 
     // Definir el orden manual de ejecución
     $filesInOrder = [
-        $sqlFolder . '/CrearTablas.SQL',
-        $sqlFolder . '/PoblarTablas.SQL'
+        $sqlFolder . 'SQL/CrearTablas.SQL',
+        $sqlFolder . 'SQL/PoblarTablas.SQL'
         
     ];
 

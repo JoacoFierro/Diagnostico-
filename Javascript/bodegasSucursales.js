@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const selectBodega = document.getElementById('bodega');
     const selectSucursal = document.getElementById('sucursal');
 
-    // Cargar bodegas al inicio
+
     async function cargarBodegas() {
         try {
-            const res = await fetch('get_bodegas.php');
+            const res = await fetch('/Servidor/bodegas.php');
             const datos = await res.json();
 
-            selectBodega.innerHTML = '<option value="">Seleccione una bodega</option>';
+            selectBodega.innerHTML = '<option value=""></option>';
 
             if (datos.error) {
                 selectBodega.innerHTML = `<option value="">Error: ${datos.error}</option>`;
@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Cargar sucursales según bodega seleccionada
+
     async function cargarSucursales(bodega) {
         try {
-            const res = await fetch(`get_sucursales.php?bodega=${encodeURIComponent(bodega)}`);
+            const res = await fetch(`/Servidor/sucursales.php?bodega=${encodeURIComponent(bodega)}`);
             const datos = await res.json();
 
             selectSucursal.innerHTML = '<option value=""></option>';
@@ -63,5 +63,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    cargarBodegas(); // iniciar carga de bodegas
+    cargarBodegas();
 });

@@ -1,11 +1,13 @@
 Instrucciones para la base de datos:
 - Tener instalado Postgres 18.0
 - La contraseña es 1234
-- El host:puerto es localhost:5432
+- El host:puerto es localhost:5432.
+- Se recomienda usar pgAdmin 4 para la visualizacion de datos.
 
 Versiones:
 
 PHP Version: OS Default Version (8.4.14)
+Postgres 18.0
 
 Observaciones:
 
@@ -13,6 +15,7 @@ Observaciones:
 - Se debe habilitar las extensiones: pdo_pgsql pgsql en el php.ini
 
 Instrucciones para ejecutar:
+- Se recomienda usar Visual Studio Code
 - Ejecute el siguiente comando en la terminal para iniciar el servidor: php -S localhost:8000
 - Abra el navegador y pegue la siguiente direccion: http://localhost:8000/formulario.html
 - Debe tener la base de datos activa
