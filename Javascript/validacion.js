@@ -24,7 +24,8 @@ async function validarFormulario(evento) {
     var materiales = Array.from(document.querySelectorAll('input[name="material"]:checked')).map(cb => cb.value);
     var descripcion = document.getElementById('descripcion').value;
 
-    //--------------------------------Validaciones 
+    //---------------------------------------------------Validaciones 
+    //--------------------------- Codigo
 
     const regexCodigo = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$/;
     const regexPrecio = /^[0-9]+(\.[0-9]{1,2})?$/;
@@ -46,7 +47,7 @@ async function validarFormulario(evento) {
         return;
     }
 
-    //---------------------------------
+    //------------------------------- Nombre
 
     else if (nombre.length == 0) {
         alert("El nombre del producto no puede estar en blanco.");
@@ -57,26 +58,26 @@ async function validarFormulario(evento) {
         return;
     }
 
-    //-------------------------------
+    //------------------------------- Bodega
     else if (bodega.length == 0) {
         alert("Debe seleccionar una bodega.");
         return;
     }
 
-    //-------------------------------
+    //------------------------------ Sucursal
     else if (sucursal.length == 0) {
         alert("Debe seleccionar una sucursal para la bodega seleccionada.");
         return;
     }
 
-    //-------------------------------
+    //------------------------------- Moneda
 
     else if (moneda.length == 0) {
         alert("Debe seleccionar una moneda para el producto.");
         return;
     }
 
-    //---------------------------------
+    //--------------------------------- Precio
 
     else if (precio.length == 0) {
         alert("El precio del producto no puede estar en blanco.");
@@ -88,14 +89,14 @@ async function validarFormulario(evento) {
         return;
     }
 
-    //--------------------------------
+    //-------------------------------- Materiales
     else if (materiales.length < 2) {
         console.log(materiales);
         alert("Debe seleccionar al menos dos materiales para el producto.");
         return;
     }
 
-    //-------------------------------
+    //------------------------------- Descripción
 
     else if (descripcion.length == 0) {
         alert("La descripción del producto no puede estar en blanco.");
@@ -106,6 +107,8 @@ async function validarFormulario(evento) {
         alert("La descripción del producto debe tener entre 10 y 1000 caracteres.");
         return;
     }
+
+    //-------------------------------- Enviar formulario
 
     const datos = new FormData();
     datos.append('codigo', codigo);
@@ -124,9 +127,8 @@ async function validarFormulario(evento) {
     })
         .then(response => {
             if (!response.ok) {
-                // Aquí detectamos errores como 404, 500, etc.
                 if (response.status === 404) {
-                    throw new Error('Archivo no encontrado (404)');
+                    throw new Error('Error HTTP: 404');
                 } else {
                     throw new Error('Error HTTP: ' + response.status);
                 }
@@ -137,7 +139,6 @@ async function validarFormulario(evento) {
             alert("Registro de producto exitoso");
         })
         .catch(error => {
-            // Este alert se mostrará si no existe el archivo o hay otro error
             alert('Error: ' + error.message);
         });
 

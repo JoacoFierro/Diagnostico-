@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-// Configuración de conexión
+// ------------- Configuración de conexión
 $host = 'localhost';
 $port = '5432';
 $dbname = 'postgres';
@@ -13,7 +13,7 @@ try {
     $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Consultar todas las monedas
+    // ---------  Consultar todas las bodegas
     $stmt = $pdo->query("SELECT nombre FROM bodegas ORDER BY nombre ASC");
     $bodegas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

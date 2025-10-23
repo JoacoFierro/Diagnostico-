@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-// Configuración de conexión
+// ----- Configuración de conexión
 $host = 'localhost';
 $port = '5432';
 $dbname = 'postgres';

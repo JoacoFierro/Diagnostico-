@@ -7,17 +7,16 @@ $user = 'postgres';
 $password = '1234';
 
 try {
-    // Conexión a PostgreSQL
+    // --------Conexión a PostgreSQL
     $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Carpeta con archivos SQL
-    $sqlFolder = __DIR__ . '/SQL';
+    // --------Carpeta con archivos SQL
+    $sqlFolder = __DIR__ . '/../SQL';
 
-    // Definir el orden manual de ejecución
     $filesInOrder = [
-        $sqlFolder . 'SQL/CrearTablas.SQL',
-        $sqlFolder . 'SQL/PoblarTablas.SQL'
+        $sqlFolder . '/CrearTablas.sql',
+        $sqlFolder . '/PoblarTablas.sql'
         
     ];
 
@@ -29,10 +28,10 @@ try {
 
         echo "📄 Ejecutando: " . basename($file) . "...\n";
 
-        // Leer contenido del archivo
+        // ------- Leer contenido del archivo
         $sql = file_get_contents($file);
 
-        // Separar las consultas por ';' y limpiar espacios
+        // ------  Separar las consultas por ';' y limpiar espacios
         $queries = array_filter(array_map('trim', explode(';', $sql)));
 
 

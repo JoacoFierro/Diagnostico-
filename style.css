@@ -3,11 +3,9 @@ body {
     font-size: 16px;
     display: flex;
     justify-content: center;
-    /* centra horizontalmente */
     align-items: center;
-    /* centra verticalmente */
     height: 100vh;
-    /* ocupa todo el alto de la ventana */
+
 }
 
 h1 {
@@ -18,13 +16,18 @@ button {
     background-color: #1aab8a;
     color: white;
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 17px 100px;
     border-radius: 5px;
     border: color #1aab8a;
     border: 2px solid #1aab8a;
-    /* define color, grosor y estilo */
     cursor: pointer;
+}
+
+textarea {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 100px;
 }
 
 .inputBlock {
@@ -89,8 +92,3 @@ button {
     padding-left: 10px;
 }
 
-textarea {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    height: 100px;
-}

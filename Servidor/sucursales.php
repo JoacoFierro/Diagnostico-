@@ -2,14 +2,14 @@
 
 header('Content-Type: application/json');
 
-// Configuración de conexión
+// ----------- Configuración de conexión
 $host = 'localhost';
 $port = '5432';
 $dbname = 'postgres';
 $user = 'postgres';
 $password = '1234';
 
-$bodega = $_GET['bodega'] ?? '';  // bodega enviada desde JS
+$bodega = $_GET['bodega'] ?? ''; 
 
 if (!$bodega) {
     echo json_encode(['error' => 'No se recibió bodega']);
